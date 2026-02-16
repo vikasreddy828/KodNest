@@ -250,6 +250,224 @@ a:hover {
   gap: var(--kn-spacing-2);
 }
 
+/* Filter Bar */
+
+.kn-filter {
+  margin-top: var(--kn-spacing-4);
+  padding-top: var(--kn-spacing-3);
+  border-top: 1px solid var(--kn-color-border-subtle);
+  display: flex;
+  flex-direction: column;
+  gap: var(--kn-spacing-2);
+}
+
+.kn-filter__row {
+  display: flex;
+  gap: var(--kn-spacing-2);
+  flex-wrap: wrap;
+}
+
+.kn-filter__field {
+  flex: 1 1 180px;
+  min-width: 0;
+}
+
+/* Job List */
+
+.kn-jobs {
+  margin-top: var(--kn-spacing-3);
+  display: flex;
+  flex-direction: column;
+  gap: var(--kn-spacing-2);
+}
+
+.kn-job-card {
+  border-radius: var(--kn-radius-lg);
+  border: 1px solid var(--kn-color-border-subtle);
+  padding: var(--kn-spacing-2);
+  background-color: var(--kn-color-surface);
+  display: flex;
+  flex-direction: column;
+  gap: var(--kn-spacing-1);
+}
+
+.kn-job-card__header {
+  display: flex;
+  justify-content: space-between;
+  gap: var(--kn-spacing-2);
+  align-items: flex-start;
+}
+
+.kn-job-card__title {
+  font-size: 16px;
+  font-weight: 500;
+  margin: 0 0 var(--kn-spacing-1) 0;
+}
+
+.kn-job-card__company {
+  margin: 0;
+  font-size: 14px;
+  color: var(--kn-color-text-soft);
+}
+
+.kn-job-card__meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--kn-spacing-1);
+  font-size: 13px;
+  color: var(--kn-color-text-soft);
+}
+
+.kn-job-card__footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--kn-spacing-2);
+  margin-top: var(--kn-spacing-1);
+}
+
+.kn-job-card__actions {
+  display: flex;
+  gap: var(--kn-spacing-1);
+}
+
+.kn-badge--source {
+  font-size: 12px;
+  padding: 2px 8px;
+  border-radius: 999px;
+  border: 1px solid var(--kn-color-border-subtle);
+  background-color: var(--kn-color-bg);
+}
+
+.kn-job-card__posted {
+  font-size: 13px;
+  color: var(--kn-color-text-soft);
+}
+
+/* Empty States */
+
+.kn-empty {
+  margin-top: var(--kn-spacing-4);
+  padding: var(--kn-spacing-3);
+  border-radius: var(--kn-radius-lg);
+  border: 1px dashed var(--kn-color-border-subtle);
+  background-color: var(--kn-color-surface);
+}
+
+.kn-empty__title {
+  margin: 0 0 var(--kn-spacing-1) 0;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.kn-empty__body {
+  margin: 0;
+  font-size: 14px;
+  color: var(--kn-color-text-soft);
+}
+
+/* Modal */
+
+.kn-modal {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 40;
+}
+
+.kn-modal__backdrop {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.kn-modal__dialog {
+  position: relative;
+  max-width: 640px;
+  width: calc(100% - 2 * var(--kn-spacing-4));
+  background-color: var(--kn-color-surface);
+  border-radius: var(--kn-radius-lg);
+  border: 1px solid var(--kn-color-border-subtle);
+  padding: var(--kn-spacing-3);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.06);
+  display: flex;
+  flex-direction: column;
+  gap: var(--kn-spacing-2);
+}
+
+.kn-modal__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: var(--kn-spacing-2);
+}
+
+.kn-modal__title {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.kn-modal__close {
+  border: none;
+  background: transparent;
+  font-size: 20px;
+  cursor: pointer;
+  line-height: 1;
+}
+
+.kn-modal__body {
+  display: flex;
+  flex-direction: column;
+  gap: var(--kn-spacing-1);
+}
+
+.kn-modal__company {
+  margin: 0;
+  font-size: 14px;
+  color: var(--kn-color-text-soft);
+}
+
+.kn-modal__meta {
+  margin: 0;
+  font-size: 13px;
+  color: var(--kn-color-text-soft);
+}
+
+.kn-modal__description {
+  margin: var(--kn-spacing-1) 0 0 0;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.kn-modal__skills {
+  margin-top: var(--kn-spacing-2);
+  display: flex;
+  flex-direction: column;
+  gap: var(--kn-spacing-1);
+}
+
+.kn-modal__skills-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--kn-spacing-1);
+}
+
+.kn-modal__skill-pill {
+  font-size: 12px;
+  padding: 4px 8px;
+  border-radius: 999px;
+  background-color: var(--kn-color-bg);
+  border: 1px solid var(--kn-color-border-subtle);
+}
+
+.kn-modal__footer {
+  display: flex;
+  justify-content: flex-end;
+}
+
 /* Main Content Layout */
 
 .kn-main {

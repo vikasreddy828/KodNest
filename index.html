@@ -147,6 +147,82 @@
                   />
                 </div>
               </div>
+
+              <!-- Filter bar (Dashboard only) -->
+              <div class="kn-filter" id="filter-bar" hidden>
+                <div class="kn-filter__row">
+                  <div class="kn-filter__field">
+                    <label class="kn-label" for="filter-keyword">Keyword</label>
+                    <input
+                      id="filter-keyword"
+                      class="kn-input"
+                      type="text"
+                      placeholder="Search title or company"
+                    />
+                  </div>
+                  <div class="kn-filter__field">
+                    <label class="kn-label" for="filter-location">Location</label>
+                    <select id="filter-location" class="kn-input">
+                      <option value="">All</option>
+                    </select>
+                  </div>
+                  <div class="kn-filter__field">
+                    <label class="kn-label" for="filter-mode">Mode</label>
+                    <select id="filter-mode" class="kn-input">
+                      <option value="">All</option>
+                      <option value="Remote">Remote</option>
+                      <option value="Hybrid">Hybrid</option>
+                      <option value="Onsite">Onsite</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="kn-filter__row">
+                  <div class="kn-filter__field">
+                    <label class="kn-label" for="filter-experience">Experience</label>
+                    <select id="filter-experience" class="kn-input">
+                      <option value="">All</option>
+                      <option value="Fresher">Fresher</option>
+                      <option value="0-1">0-1</option>
+                      <option value="1-3">1-3</option>
+                      <option value="3-5">3-5</option>
+                    </select>
+                  </div>
+                  <div class="kn-filter__field">
+                    <label class="kn-label" for="filter-source">Source</label>
+                    <select id="filter-source" class="kn-input">
+                      <option value="">All</option>
+                      <option value="LinkedIn">LinkedIn</option>
+                      <option value="Naukri">Naukri</option>
+                      <option value="Indeed">Indeed</option>
+                    </select>
+                  </div>
+                  <div class="kn-filter__field">
+                    <label class="kn-label" for="filter-sort">Sort</label>
+                    <select id="filter-sort" class="kn-input">
+                      <option value="latest">Latest</option>
+                      <option value="oldest">Oldest</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Dashboard / Saved job list area -->
+              <div class="kn-jobs" id="job-list" hidden></div>
+
+              <!-- Premium empty states -->
+              <div class="kn-empty" id="jobs-empty" hidden>
+                <h2 class="kn-empty__title">Nothing matches these filters yet.</h2>
+                <p class="kn-empty__body">
+                  Adjust your filters or reset them to see all available roles.
+                </p>
+              </div>
+
+              <div class="kn-empty" id="saved-empty" hidden>
+                <h2 class="kn-empty__title">No saved jobs yet.</h2>
+                <p class="kn-empty__body">
+                  In the next step, you will keep your shortlisted roles here for calm review.
+                </p>
+              </div>
             </div>
           </div>
         </section>
