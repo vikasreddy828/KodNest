@@ -5,6 +5,7 @@
     <title>KodNest Premium Build System</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="styles.css" />
+    <script src="app.js" defer></script>
   </head>
   <body class="kn-body">
     <!-- Top Bar -->
@@ -21,6 +22,37 @@
         </span>
       </div>
     </header>
+
+    <!-- Primary Navigation -->
+    <nav class="kn-nav" aria-label="Primary">
+      <button
+        class="kn-nav__toggle"
+        type="button"
+        aria-label="Toggle navigation"
+        aria-expanded="false"
+      >
+        <span class="kn-nav__toggle-line"></span>
+        <span class="kn-nav__toggle-line"></span>
+        <span class="kn-nav__toggle-line"></span>
+      </button>
+      <div class="kn-nav__items">
+        <a href="#/dashboard" data-route="/dashboard" class="kn-nav__link">
+          Dashboard
+        </a>
+        <a href="#/saved" data-route="/saved" class="kn-nav__link">
+          Saved
+        </a>
+        <a href="#/digest" data-route="/digest" class="kn-nav__link">
+          Digest
+        </a>
+        <a href="#/settings" data-route="/settings" class="kn-nav__link">
+          Settings
+        </a>
+        <a href="#/proof" data-route="/proof" class="kn-nav__link">
+          Proof
+        </a>
+      </div>
+    </nav>
 
     <!-- Context Header -->
     <section class="kn-context">
@@ -41,43 +73,16 @@
         <section class="kn-workspace">
           <div class="kn-card">
             <header class="kn-card__header">
-              <h2 class="kn-card__title">Primary workspace shell</h2>
+              <h2 class="kn-card__title">Job Notification Tracker</h2>
               <p class="kn-card__meta">
-                This area holds the main interaction for the current step.
+                Skeleton routes for the Job Notification Tracker workspace.
               </p>
             </header>
             <div class="kn-card__body">
-              <div class="kn-field">
-                <label class="kn-label" for="example-name">Configuration name</label>
-                <input
-                  id="example-name"
-                  class="kn-input"
-                  type="text"
-                  placeholder="Name for this configuration"
-                />
-                <p class="kn-field__helper">
-                  Use a clear, descriptive name. This label will appear in logs.
-                </p>
-              </div>
-
-              <div class="kn-field">
-                <label class="kn-label" for="example-desc">Short description</label>
-                <textarea
-                  id="example-desc"
-                  class="kn-input kn-input--textarea"
-                  rows="3"
-                  placeholder="Describe what this build step is responsible for."
-                ></textarea>
-              </div>
-
-              <div class="kn-actions">
-                <button type="button" class="kn-button kn-button--primary">
-                  Save shell
-                </button>
-                <button type="button" class="kn-button kn-button--secondary">
-                  Cancel
-                </button>
-              </div>
+              <h1 class="kn-route__title" id="route-title">Dashboard</h1>
+              <p class="kn-route__subtitle" id="route-subtitle">
+                This section will be built in the next step.
+              </p>
             </div>
           </div>
         </section>
