@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>KodNest Premium Build System</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="kn-body">
+    <!-- Top Bar -->
+    <header class="kn-topbar">
+      <div class="kn-topbar__left">
+        <span class="kn-topbar__project">KodNest Premium Build System</span>
+      </div>
+      <div class="kn-topbar__center">
+        <span class="kn-topbar__progress">Step 1 / 4</span>
+      </div>
+      <div class="kn-topbar__right">
+        <span class="kn-badge kn-badge--status kn-badge--status-not-started">
+          Not Started
+        </span>
+      </div>
+    </header>
+
+    <!-- Context Header -->
+    <section class="kn-context">
+      <div class="kn-context__inner">
+        <h1 class="kn-context__title">
+          Configure this build step with confidence.
+        </h1>
+        <p class="kn-context__subtitle">
+          Define what should be built here so every run behaves the same way.
+        </p>
+      </div>
+    </section>
+
+    <!-- Main Content Row -->
+    <main class="kn-main">
+      <div class="kn-main__inner">
+        <!-- Primary Workspace (70%) -->
+        <section class="kn-workspace">
+          <div class="kn-card">
+            <header class="kn-card__header">
+              <h2 class="kn-card__title">Primary workspace shell</h2>
+              <p class="kn-card__meta">
+                This area holds the main interaction for the current step.
+              </p>
+            </header>
+            <div class="kn-card__body">
+              <div class="kn-field">
+                <label class="kn-label" for="example-name">Configuration name</label>
+                <input
+                  id="example-name"
+                  class="kn-input"
+                  type="text"
+                  placeholder="Name for this configuration"
+                />
+                <p class="kn-field__helper">
+                  Use a clear, descriptive name. This label will appear in logs.
+                </p>
+              </div>
+
+              <div class="kn-field">
+                <label class="kn-label" for="example-desc">Short description</label>
+                <textarea
+                  id="example-desc"
+                  class="kn-input kn-input--textarea"
+                  rows="3"
+                  placeholder="Describe what this build step is responsible for."
+                ></textarea>
+              </div>
+
+              <div class="kn-actions">
+                <button type="button" class="kn-button kn-button--primary">
+                  Save shell
+                </button>
+                <button type="button" class="kn-button kn-button--secondary">
+                  Cancel
+                </button>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Secondary Panel (30%) -->
+        <aside class="kn-panel">
+          <section class="kn-panel__section">
+            <h3 class="kn-panel__title">Step overview</h3>
+            <p class="kn-panel__body">
+              Keep this step focused. Capture only what is required for a repeatable build.
+            </p>
+          </section>
+
+          <section class="kn-panel__section">
+            <div class="kn-panel__label-row">
+              <span class="kn-label kn-label--small">Prompt</span>
+            </div>
+            <div class="kn-prompt">
+              <pre class="kn-prompt__content">
+Use these inputs to define a calm, predictable build configuration.
+- Name the configuration clearly
+- Describe its responsibility in one or two sentences</pre
+              >
+            </div>
+          </section>
+
+          <section class="kn-panel__section kn-panel__section--actions">
+            <button class="kn-button kn-button--primary" type="button">
+              Copy
+            </button>
+            <button class="kn-button kn-button--primary" type="button">
+              Build in Lovable
+            </button>
+            <button class="kn-button kn-button--secondary" type="button">
+              It Worked
+            </button>
+            <button class="kn-button kn-button--secondary" type="button">
+              Error
+            </button>
+            <button class="kn-button kn-button--secondary" type="button">
+              Add Screenshot
+            </button>
+          </section>
+        </aside>
+      </div>
+    </main>
+
+    <!-- Proof Footer -->
+    <footer class="kn-proof">
+      <div class="kn-proof__inner">
+        <div class="kn-proof__label">Proof checklist</div>
+        <div class="kn-proof__items">
+          <div class="kn-proof-item">
+            <label class="kn-proof-item__label">
+              <input type="checkbox" class="kn-checkbox" />
+              <span class="kn-proof-item__text">UI Built</span>
+            </label>
+            <input
+              type="text"
+              class="kn-input kn-input--inline"
+              placeholder="Add note or link"
+            />
+          </div>
+          <div class="kn-proof-item">
+            <label class="kn-proof-item__label">
+              <input type="checkbox" class="kn-checkbox" />
+              <span class="kn-proof-item__text">Logic Working</span>
+            </label>
+            <input
+              type="text"
+              class="kn-input kn-input--inline"
+              placeholder="Add note or link"
+            />
+          </div>
+          <div class="kn-proof-item">
+            <label class="kn-proof-item__label">
+              <input type="checkbox" class="kn-checkbox" />
+              <span class="kn-proof-item__text">Test Passed</span>
+            </label>
+            <input
+              type="text"
+              class="kn-input kn-input--inline"
+              placeholder="Add note or link"
+            />
+          </div>
+          <div class="kn-proof-item">
+            <label class="kn-proof-item__label">
+              <input type="checkbox" class="kn-checkbox" />
+              <span class="kn-proof-item__text">Deployed</span>
+            </label>
+            <input
+              type="text"
+              class="kn-input kn-input--inline"
+              placeholder="Add note or link"
+            />
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
