@@ -2,12 +2,46 @@
 
 (function () {
   var ROUTES = {
-    "/": "Dashboard",
-    "/dashboard": "Dashboard",
-    "/saved": "Saved",
-    "/digest": "Digest",
-    "/settings": "Settings",
-    "/proof": "Proof",
+    "/": {
+      title: "Stop Missing The Right Jobs.",
+      subtitle: "Precision-matched job discovery delivered daily at 9AM.",
+      showCta: true,
+      showSettings: false,
+    },
+    "/dashboard": {
+      title: "Dashboard",
+      subtitle:
+        "No jobs yet. In the next step, you will load a realistic dataset.",
+      showCta: false,
+      showSettings: false,
+    },
+    "/settings": {
+      title: "Settings",
+      subtitle: "This section will be built in the next step.",
+      showCta: false,
+      showSettings: true,
+    },
+    "/saved": {
+      title: "Saved Jobs",
+      subtitle:
+        "Nothing saved yet. In the next step, you will keep the roles that matter here.",
+      showCta: false,
+      showSettings: false,
+    },
+    "/digest": {
+      title: "Daily Digest",
+      subtitle:
+        "No digests yet. In the next step, you will see a calm daily summary here.",
+      showCta: false,
+      showSettings: false,
+    },
+    "/proof": {
+      title: "Proof Workspace",
+      subtitle:
+        "This page will collect proof artifacts for your builds in the next step.",
+      showCta: false,
+      showSettings: false,
+    },
   };
 
   function getPathFromHash() {
@@ -30,6 +64,8 @@
   function updateRoute(path) {
     var titleEl = document.getElementById("route-title");
     var subtitleEl = document.getElementById("route-subtitle");
+    var ctaEl = document.getElementById("route-cta");
+    var settingsEl = document.getElementById("settings-fields");
 
     // Unknown route → calm 404 state
     if (!ROUTES[path]) {
@@ -46,22 +82,36 @@
         link.classList.remove("kn-nav__link--active");
       });
 
+      if (ctaEl) {
+        ctaEl.hidden = true;
+      }
+      if (settingsEl) {
+        settingsEl.hidden = true;
+      }
+
       return;
     }
 
-    var title = ROUTES[path];
+    var config = ROUTES[path];
     if (titleEl) {
-      titleEl.textContent = title;
+      titleEl.textContent = config.title;
     }
     if (subtitleEl) {
-      subtitleEl.textContent = "This section will be built in the next step.";
+      subtitleEl.textContent = config.subtitle;
+    }
+
+    if (ctaEl) {
+      ctaEl.hidden = !config.showCta;
+    }
+    if (settingsEl) {
+      settingsEl.hidden = !config.showSettings;
     }
 
     // Update nav active link
     var links = document.querySelectorAll(".kn-nav__link");
     links.forEach(function (link) {
       var route = link.getAttribute("data-route");
-      if (route === path || (path === "/" && route === "/dashboard")) {
+      if (route === path) {
         link.classList.add("kn-nav__link--active");
       } else {
         link.classList.remove("kn-nav__link--active");
@@ -73,7 +123,7 @@
     var link = evt.target.closest(".kn-nav__link");
     if (!link) return;
     evt.preventDefault();
-    var route = link.getAttribute("data-route") || "/dashboard";
+    var route = link.getAttribute("data-route") || "/";
     setHashForPath(route);
   }
 
@@ -111,6 +161,13 @@
 
     var initialPath = getPathFromHash();
     updateRoute(initialPath);
+
+    var ctaEl = document.getElementById("route-cta");
+    if (ctaEl) {
+      ctaEl.addEventListener("click", function () {
+        setHashForPath("/settings");
+      });
+    }
   });
 })();
 
